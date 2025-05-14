@@ -23,8 +23,6 @@ disk_load:
 	.disk_error:
 	mov bx, .DISK_ERROR
 	call print
-	mov dh, ah	; ah is the error code
-	call print_hex
 	jmp end_of_boot
 	
 	.sectors_error:
