@@ -23,7 +23,7 @@ boot_sector_load_kernel:
 	call print_real_mode
 
 	mov bx, KERNEL_OFFSET
-	mov dh, 10
+	mov dh, 50		; Number of sectors to read
 	mov dl, [boot_drive]
 	call boot_sector_disk_load
 	ret
